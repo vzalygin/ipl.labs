@@ -13,5 +13,6 @@ const drawTree = (node, tabs) => {
 };
 
 treeBtn.addEventListener("click", (event) => {
+  treeContainer.textContent = "";
   drawTree(document.body, 0);
 });

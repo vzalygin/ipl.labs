@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8"/>
+        <link href="./index.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="container form">
+            <h3>Добавление товара</h3>
+            <div class="horiz">
+                <div class="vert">
+                    <span class="el">Наименование</span>
+                    <span class="el">Стоимость, ₽</span>
+                </div>
+                <div class="vert">
+                    <input class="el" id="name" type="text" alt="Наименование"/>
+                    <input class="el" id="price" type="number" alt="Стоимость" value="0"/>
+                </div>
+            </div>                
+            <div class="vert">
+                <button class="el button" onclick="addToTable()">Добавить в таблицу</button>
+            </div>
+        </div>
+        <div class="container table horiz">
+            <div class="table-column vert" id="column1">
+                <div class="table-header">Товар</div>
+            </div>
+            <div class="table-column vert" id="column2">
+                <div class="table-header">Стоимость</div>
+            </div>
+        </div>
+        <div class="list container vert" id="showcase">
+            <h2>Каталог растений</h2>
+        </div>
+
+
+        <script src="./main.js"></script>
+    </body>
+</html>

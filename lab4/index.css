@@ -1,0 +1,102 @@
+body {
+    display: flex;
+    background-color: beige;
+}
+
+main {
+    display: flex;
+}
+
+.container {
+    background-color: bisque ;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    height: fit-content;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.horiz {
+    display: flex;
+    flex-direction: row;
+}
+
+.vert {
+    display: flex;
+    flex-direction: column;
+}
+
+.el {
+    margin: 5px;
+}
+
+.button:hover {
+    background-color: greenyellow;
+    transition-duration: 0.3s;
+}
+
+.table {
+    border: 2px solid;
+    min-width: 400px;
+    justify-content: space-around;
+    border-radius: 5px;
+    background-color: bisque;
+}
+
+.table-header {
+    padding: 5px;
+    font-style: oblique;
+}
+
+.table-header:hover {
+    background-color: darkgray;
+    transition-duration: 0.3s;
+}
+
+.table-column {
+    width: 50%;
+}
+
+.table-element {
+    padding: 5px;
+    margin: 0px;
+    justify-content: center;
+}
+
+.table-element:hover {
+    background-color: aliceblue;
+    transition-duration: 0.3s;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.card {
+    background-color: azure;
+    border-radius: 5px;
+    margin: 5px;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+}
+
+.card:hover {
+    background-color: white;
+    transition-duration: 0.3s;
+}
+
+img {
+    height: 70%;
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
