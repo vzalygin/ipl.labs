@@ -27,14 +27,14 @@ class Task1Tests < Minitest::Test
 
   def get_result
     file = File.open(@@to_path, 'r')
-    res = file.readlines
+    res = file.readlines.join('')
     file.close
     res
   end
 
   def test_empty
     insert_content('')
-    expected = []
+    expected = ''
 
     reverse(@@from_path, @@to_path)
 
@@ -43,7 +43,7 @@ class Task1Tests < Minitest::Test
 
   def test_regular
     insert_content("ab\ncd")
-    expected = [" ab\n", ' cd']
+    expected = " ab\n cd"
 
     reverse(@@from_path, @@to_path)
 

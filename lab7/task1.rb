@@ -3,10 +3,11 @@
 def reverse(from, to)
   from = File.open(from, 'r')
   to = File.open(to, 'w')
-  from.readlines
-      .map { |line| " #{line}" }
-      .reverse
-      .each { |line| to.write(line) }
+  to.write(
+    from.readlines
+        .map { |line| " #{line.strip}" }
+        .join("\n")
+  )
   from.close
   to.close
 end
