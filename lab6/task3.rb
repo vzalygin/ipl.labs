@@ -6,9 +6,8 @@ def minmax(l, r, f)
   max_i = 0
   min_value = Float::INFINITY
   min_i = 0
-  (1..((r - l) / eps).to_i).each do |i|
+  (0..((r - l) / eps).to_i).each do |i|
     i = i * eps + l
-    puts i
     if max_value < f.call(i)
       max_value = f.call(i)
       max_i = i
@@ -18,16 +17,14 @@ def minmax(l, r, f)
       min_i = i
     end
   end
-  [max_i, min_i]
+  [min_i, max_i]
 end
 
 def io_task3
-  f1 = ->(x) { (x - 1) / (x + 2) }
-  l1 = 0
-  r1 = 2
-  f2 = ->(x) { Math.sin(x / 2 - 1) }
-  l2 = -1
-  r2 = 1
-  puts 'choose f1 or f2'
-  # TODO
+  fs = [[0, 2, ->(x) { (x - 1) / (x + 2) }],
+        [-1, 1, proc { |x| Math.sin(x / 2 - 1) }]]
+
+  puts 'choose f1 (print 1) or f2 (print 2)'
+  min, max = minmax(*fs[gets.to_i - 1])
+  puts "min: #{min}, max: #{max}"
 end

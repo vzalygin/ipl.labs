@@ -36,3 +36,19 @@ class Task2Tests < Minitest::Test
     assert_equal(expected, find2(eps))
   end
 end
+
+class Task3Tests < Minitest::Test
+  def test_real
+    f = [0, 2, ->(x) { (x - 1) / (x + 2) }]
+    expected = [0, 2]
+
+    assert_equal(expected, minmax(*f))
+  end
+
+  def test_sin
+    f = [-1, 1, proc { |x| Math.sin(x / 2 - 1) }]
+    expected = [-1, 1]
+
+    assert_equal(expected, minmax(*f))
+  end
+end
