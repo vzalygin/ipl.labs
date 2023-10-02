@@ -7,7 +7,7 @@ require_relative 'task3'
 
 class Task1Tests < Minitest::Test
   def test_task
-    assert_equal func(0), 0
+    assert_equal(0, func(0)) 
   end
 end
 
@@ -18,7 +18,7 @@ class Task2Tests < Minitest::Test
     n = 0
     expected = []
 
-    assert_equal(filter(dates, temps, n), expected)
+    assert_equal(expected, filter(dates, temps, n))
   end
 
   def test_regular
@@ -27,7 +27,7 @@ class Task2Tests < Minitest::Test
     n = 3
     expected = [['02.01.1970', -5]]
 
-    assert_equal(filter(dates, temps, n), expected)
+    assert_equal(expected, filter(dates, temps, n))
   end
 
   def test_regular2
@@ -36,7 +36,7 @@ class Task2Tests < Minitest::Test
     n = 2
     expected = [['06.01.1970', 0]]
 
-    assert_equal(filter(dates, temps, n), expected)
+    assert_equal(expected, filter(dates, temps, n))
   end
 
   def test_regular3
@@ -45,7 +45,7 @@ class Task2Tests < Minitest::Test
     n = 1
     expected = []
 
-    assert_equal(filter(dates, temps, n), expected)
+    assert_equal(expected, filter(dates, temps, n))
   end
 end
 
@@ -54,14 +54,14 @@ class Task3Tests < Minitest::Test
     strs = []
     expected = []
 
-    assert_equal(correct_strs(strs), expected)
+    assert_equal(expected, correct_strs(strs))
   end
 
   def regular_test
     strs = ['abc ab a', 'a ac abc', 'a a a', 'a a ab']
     expected = ['abc ab a', 'abc ac a', 'a a a', 'ab a a']
 
-    assert_equal(correct_strs(strs), expected)
+    assert_equal(expected, correct_strs(strs))
   end
 
   def generate_random_word
