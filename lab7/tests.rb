@@ -8,15 +8,15 @@ class Task1Tests < Minitest::Test
   @@to_path = './g'
 
   def setup
-    # File.open(@@from_path, 'w+') do |file|
-    # end
-    # File.open(@@to_path, 'w+') do |file|
-    # end
+    File.open(@@from_path, 'w+') do |file|
+    end
+    File.open(@@to_path, 'w+') do |file|
+    end
   end
 
   def teardown
-    # File.delete(@@from_path)
-    # File.delete(@@to_path)
+    File.delete(@@from_path)
+    File.delete(@@to_path)
   end
 
   def insert_content(text)
@@ -26,15 +26,24 @@ class Task1Tests < Minitest::Test
   end
 
   def get_result
-    File.open(@@to_path, 'r') do |file|
-      res = file.readlines
-    end
+    file = File.open(@@to_path, 'r')
+    res = file.readlines
+    file.close
     res
   end
 
   def test_empty
-    insert_content('a')
-    expected = [' a']
+    insert_content('')
+    expected = []
+
+    reverse(@@from_path, @@to_path)
+
+    assert_equal(expected, get_result)
+  end
+
+  def test_regular
+    insert_content("ab\ncd")
+    expected = [" ab\n", ' cd']
 
     reverse(@@from_path, @@to_path)
 

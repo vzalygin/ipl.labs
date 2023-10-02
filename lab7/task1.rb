@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 def reverse(from, to)
-  from = File.open(from)
-  to = File.open(to)
+  from = File.open(from, 'r')
+  to = File.open(to, 'w')
   from.readlines
       .map { |line| " #{line}" }
       .reverse
