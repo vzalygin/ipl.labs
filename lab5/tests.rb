@@ -7,7 +7,7 @@ require_relative 'task3'
 
 class Task1Tests < Minitest::Test
   def test_task
-    assert_equal(0, func(0)) 
+    assert_equal(0, func(0))
   end
 end
 
