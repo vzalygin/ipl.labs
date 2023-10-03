@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<title>Залыгин Вячеслав Константинович, ИУ6-33Б, 15 вариант. Дан массив чисел arr_a. Определить сумму положительных элементов и поместить ее на место последнего четного элемента этого массива.</title>
+<meta charset="utf-8">
+<link  href="index.css" rel="stylesheet"/>    
+<style>
+.container {
+    margin: 5px;
+    padding: 5px;
+}
+
+span {
+    margin: 3px;
+}
+</style>
+
+<div class="container">
+    <input id="elem" type="number" value="0"/>
+    <button id="push-button">Push element</button>
+</div>
+
+<div class="container">
+    <p>Array before</p>
+    <div id="before"></div>
+    <p>Array after</p>
+    <div id="after"></div>
+    <button id="exec-button">Execute</button>
+</div>
+
+<script type="text/javascript">
+const array = [];
+const before = document.getElementById("before");
+const after = document.getElementById("after");
+const pushButton = document.getElementById("push-button");
+const execButton = document.getElementById("exec-button");
+const elem = document.getElementById("elem");
+
+pushButton.addEventListener("click", (event) => {
+    pushElemToArray();
+});
+
+elem.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+        pushElemToArray();    
+    }
+})
+
+execButton.addEventListener("click", (event) => {
+    let newArray = func(array);
+    let isEqual = array.map((x, i) => x === newArray[i]).reduce((acc, x) => acc && x, true);
+    if (isEqual) {
+        alert("There is no modification.")
+    }
+    makeArrayView(newArray, after)
+});
+
+const pushElemToArray = () => {
+    const value = parseInt(elem.value); 
+    if (!isNaN(value)) {
+        array.push(value);
+        makeArrayView(array, before);    
+    } else {
+        alert(`${elem.value} is not a number! Please input the number.`)
+        elem.value = "";
+    }
+};
+
+const func = (array) => {
+    array = [...array]
+    let last_even = array
+        .map((x, i) => {
+            console.log('m', x, i);
+            return [x, i]
+        })
+        .filter(([x, i]) => {
+            console.log('f', x, i) 
+            return x % 2 == 0 
+        });
+    if (last_even.length > 0) {
+        last_even = last_even[last_even.length-1][1];
+    } else {
+        alert("There is no any even number in array. Push some even number.");
+        return [];
+    }
+    array[last_even] = array.filter(x => x > 0).reduce((prev, x) => prev+x, 0)
+    return array;
+}
+
+
+const makeElementView = (x) => {
+    const elem = document.createElement("span");
+    elem.innerText = x;
+    return elem;
+}
+
+const makeArrayView = (array, container) => {
+    container.innerHTML = "";
+    array
+        .map(x => makeElementView(x))
+        .forEach(x => {
+            container.appendChild(x)
+        });
+}
+</script>
