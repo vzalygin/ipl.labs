@@ -5,8 +5,8 @@ require_relative 'task1'
 require_relative 'task2'
 
 class Task1Tests < Minitest::Test
-  @@from_path = './f'
-  @@to_path = './g'
+  @from_path = './f'
+  @to_path = './g'
 
   def setup
     File.open(@@from_path, 'w+') do |file|
@@ -26,7 +26,7 @@ class Task1Tests < Minitest::Test
     end
   end
 
-  def get_result
+  def result
     file = File.open(@@to_path, 'r')
     res = file.readlines.join('')
     file.close
@@ -39,16 +39,16 @@ class Task1Tests < Minitest::Test
 
     reverse(@@from_path, @@to_path)
 
-    assert_equal(expected, get_result)
+    assert_equal(expected, result)
   end
 
   def test_regular
-    insert_content("ab\ncd")
-    expected = " ab\n cd"
+    insert_content("ab\ncd\n")
+    expected = " ab\n cd\n"
 
     reverse(@@from_path, @@to_path)
 
-    assert_equal(expected, get_result)
+    assert_equal(expected, result)
   end
 end
 

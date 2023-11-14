@@ -6,7 +6,7 @@ def reverse(from, to)
   to.write(
     from.readlines
         .map { |line| " #{line.strip}" }
-        .join("\n")
+        .inject('') { |acc, x| acc + "#{x}\n" }
   )
   from.close
   to.close

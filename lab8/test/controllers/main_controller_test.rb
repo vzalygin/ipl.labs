@@ -1,7 +1,10 @@
-require "test_helper"
+# frozen_string_literal: true
+
+require 'test_helper'
 
 class MainControllerTest < ActionDispatch::IntegrationTest
-  # test "the truth" do
-  #   assert true
-  # end
+  test "func test" do
+    get "/compute/view", params: { n: 10 }
+    assert_response :success
+  end
 end
