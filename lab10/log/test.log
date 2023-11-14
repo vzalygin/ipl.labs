@@ -1,0 +1,149 @@
+  [1m[35m (18.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------
+MainControllerTest: test_func_test
+----------------------------------
+Started POST "/compute/view" for 127.0.0.1 at 2023-11-14 09:41:24 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/compute/view"):
+  
+test/controllers/main_controller_test.rb:7:in `block in <class:MainControllerTest>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+ComputeControllerTest: test_should_get_view
+-------------------------------------------
+Started GET "/compute/view" for 127.0.0.1 at 2023-11-14 09:41:24 +0000
+Processing by ComputeController#view as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering compute/view.html.erb within layouts/application
+  Rendered compute/view.html.erb within layouts/application (Duration: 0.4ms | Allocations: 198)
+  Rendered layout layouts/application.html.erb (Duration: 457.9ms | Allocations: 95164)
+Completed 200 OK in 465ms (Views: 463.0ms | ActiveRecord: 0.0ms | Allocations: 96937)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+ComputeControllerTest: test_should_get_input
+--------------------------------------------
+Started GET "/compute/input" for 127.0.0.1 at 2023-11-14 09:41:25 +0000
+Processing by ComputeController#input as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering compute/input.html.erb within layouts/application
+  Rendered compute/input.html.erb within layouts/application (Duration: 0.8ms | Allocations: 325)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1505)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 1765)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------
+MainControllerTest: test_func_test
+----------------------------------
+Started POST "/compute/view" for 127.0.0.1 at 2023-11-14 09:43:09 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/compute/view"):
+  
+test/controllers/main_controller_test.rb:7:in `block in <class:MainControllerTest>'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+ComputeControllerTest: test_should_get_view
+-------------------------------------------
+Started GET "/compute/view" for 127.0.0.1 at 2023-11-14 09:43:09 +0000
+Processing by ComputeController#view as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering compute/view.html.erb within layouts/application
+  Rendered compute/view.html.erb within layouts/application (Duration: 0.3ms | Allocations: 196)
+  Rendered layout layouts/application.html.erb (Duration: 46.9ms | Allocations: 32087)
+Completed 200 OK in 50ms (Views: 47.9ms | ActiveRecord: 0.0ms | Allocations: 33861)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+ComputeControllerTest: test_should_get_input
+--------------------------------------------
+Started GET "/compute/input" for 127.0.0.1 at 2023-11-14 09:43:09 +0000
+Processing by ComputeController#input as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering compute/input.html.erb within layouts/application
+  Rendered compute/input.html.erb within layouts/application (Duration: 0.5ms | Allocations: 323)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 1503)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 1763)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+ComputeControllerTest: test_should_get_view
+-------------------------------------------
+Started GET "/compute/view" for 127.0.0.1 at 2023-11-14 09:43:34 +0000
+Processing by ComputeController#view as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering compute/view.html.erb within layouts/application
+  Rendered compute/view.html.erb within layouts/application (Duration: 0.4ms | Allocations: 297)
+  Rendered layout layouts/application.html.erb (Duration: 51.9ms | Allocations: 32242)
+Completed 200 OK in 59ms (Views: 54.4ms | ActiveRecord: 0.0ms | Allocations: 36229)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+ComputeControllerTest: test_should_get_input
+--------------------------------------------
+Started GET "/compute/input" for 127.0.0.1 at 2023-11-14 09:43:34 +0000
+Processing by ComputeController#input as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering compute/input.html.erb within layouts/application
+  Rendered compute/input.html.erb within layouts/application (Duration: 0.6ms | Allocations: 336)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1516)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 1777)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------
+MainControllerTest: test_func_test
+----------------------------------
+Started GET "/compute/view?n=10&commit=Compute%2Bresult" for 127.0.0.1 at 2023-11-14 09:43:34 +0000
+Processing by ComputeController#view as HTML
+  Parameters: {"n"=>"10", "commit"=>"Compute+result"}
+  Rendering layout layouts/application.html.erb
+  Rendering compute/view.html.erb within layouts/application
+  Rendered compute/view.html.erb within layouts/application (Duration: 0.0ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1205)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1436)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+ComputeControllerTest: test_should_get_input
+--------------------------------------------
+Started GET "/compute/input" for 127.0.0.1 at 2023-11-14 09:43:53 +0000
+Processing by ComputeController#input as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering compute/input.html.erb within layouts/application
+  Rendered compute/input.html.erb within layouts/application (Duration: 0.8ms | Allocations: 477)
+  Rendered layout layouts/application.html.erb (Duration: 50.1ms | Allocations: 32419)
+Completed 200 OK in 57ms (Views: 52.6ms | ActiveRecord: 0.0ms | Allocations: 36373)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+ComputeControllerTest: test_should_get_view
+-------------------------------------------
+Started GET "/compute/view" for 127.0.0.1 at 2023-11-14 09:43:53 +0000
+Processing by ComputeController#view as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering compute/view.html.erb within layouts/application
+  Rendered compute/view.html.erb within layouts/application (Duration: 0.6ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1372)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 1650)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------
+MainControllerTest: test_func_test
+----------------------------------
+Started GET "/compute/view?n=10" for 127.0.0.1 at 2023-11-14 09:43:53 +0000
+Processing by ComputeController#view as HTML
+  Parameters: {"n"=>"10"}
+  Rendering layout layouts/application.html.erb
+  Rendering compute/view.html.erb within layouts/application
+  Rendered compute/view.html.erb within layouts/application (Duration: 0.0ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 1204)
+Completed 200 OK in 1ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 1435)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
