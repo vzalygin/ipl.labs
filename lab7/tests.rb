@@ -5,8 +5,8 @@ require_relative 'task1'
 require_relative 'task2'
 
 class Task1Tests < Minitest::Test
-  @from_path = './f'
-  @to_path = './g'
+  @@from_path = './f'
+  @@to_path = './g'
 
   def setup
     File.open(@@from_path, 'w+') do |file|
@@ -86,5 +86,17 @@ class Task2Tests < Minitest::Test
     expected = 2
 
     assert_equal(expected, obj.number_of_digits)
+  end
+
+  def test_inheritance_intfloat
+    obj = IntAndFloat.new(42, -4.3)
+
+    assert_kind_of(Int, obj)
+  end
+
+  def test_inheritance_int
+    obj = Int.new(42)
+
+    assert_instance_of(Int, obj)
   end
 end

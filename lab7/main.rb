@@ -14,5 +14,3 @@ def nav_to_task
     puts 'unknown task number'
   end
 end
-
-nav_to_task
