@@ -12,7 +12,7 @@ class ComputeController < ApplicationController
     n = params[:n].to_i
     @result = (0..n)
               .select { |i| is_palindrome(i * i) }
-              .map { |i| {"n": i, "nn": i*i}}
+              .map { |i| { "n": i, "nn": i * i } }
 
     render xml: @result
   end
