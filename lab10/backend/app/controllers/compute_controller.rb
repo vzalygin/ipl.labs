@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'libxml'
-
 class ComputeController < ApplicationController
   def input; end
 
@@ -14,16 +12,8 @@ class ComputeController < ApplicationController
     n = params[:n].to_i
     @result = (0..n)
               .select { |i| is_palindrome(i * i) }
+              .map { |i| {"n": i, "nn": i*i}}
 
-    respond_to do |format|
-      format.html
-      format.json do
-      render json:
-      {type: @result.class.to_s, value: @result}
-      end
-      format.xml do 
-        { @result }.to_xml
-      end
-    end
+    render xml: @result
   end
 end
