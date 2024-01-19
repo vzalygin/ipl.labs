@@ -1,5 +1,10 @@
 # frozen_string_literal: true
 
+# n = params[:n].to_i
+# @result = (0..n)
+#           .select { |i| is_palindrome(i * i) }
+#           .map { |i| { "n": i, "nn": i * i } }
+
 class CalcController < ApplicationController
   def index; end
 
